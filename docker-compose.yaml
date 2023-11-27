@@ -1,0 +1,16 @@
+version: "3"
+services:
+  app_ubuntu:
+    container_name: app_ubuntu-v.1
+    image: app_ubuntu:1.0
+    build: .
+    extra_hosts:
+      galera-cluster: 192.168.2.23
+    ports:
+      - 8081:80
+      # - 4431:443
+    # volumes:
+    #   - ./var:/opt/pm/apps/swb/var
+    #   - ./var/log/uwsgi:/var/log/uwsgi/app
+    #   - ./web/html/lib/app/swb:/opt/pm/apps/swb/web/html/lib/app/swb
+    #   - /etc/ssl/ssl-wahana:/etc/ssl/ssl-wahana
